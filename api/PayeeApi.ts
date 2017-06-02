@@ -26,7 +26,7 @@ import { Configuration }                                     from '../configurat
 
 
 @Injectable()
-export class TransferApi {
+export class PayeeApi {
     protected basePath = 'http://localhost:64319';
     public defaultHeaders: Headers = new Headers();
     public configuration: Configuration = new Configuration();
@@ -45,8 +45,8 @@ export class TransferApi {
      * 
      * @param id 
      */
-    public transferDelete(id: string, extraHttpRequestParams?: any): Observable<any> {
-        return this.transferDeleteWithHttpInfo(id, extraHttpRequestParams)
+    public payeeDelete(id: number, extraHttpRequestParams?: any): Observable<any> {
+        return this.payeeDeleteWithHttpInfo(id, extraHttpRequestParams)
             .map((response: Response) => {
                 if (response.status === 204) {
                     return undefined;
@@ -60,8 +60,8 @@ export class TransferApi {
      * 
      * 
      */
-    public transferGet(extraHttpRequestParams?: any): Observable<models.ApiResponseIEnumerableITransfer> {
-        return this.transferGetWithHttpInfo(extraHttpRequestParams)
+    public payeeGet(extraHttpRequestParams?: any): Observable<models.ApiResponseIEnumerableIPayee> {
+        return this.payeeGetWithHttpInfo(extraHttpRequestParams)
             .map((response: Response) => {
                 if (response.status === 204) {
                     return undefined;
@@ -76,8 +76,8 @@ export class TransferApi {
      * 
      * @param id 
      */
-    public transferGet_1(id: string, extraHttpRequestParams?: any): Observable<models.ApiResponseITransfer> {
-        return this.transferGet_1WithHttpInfo(id, extraHttpRequestParams)
+    public payeeGet_1(id: string, extraHttpRequestParams?: any): Observable<models.ApiResponseIPayee> {
+        return this.payeeGet_1WithHttpInfo(id, extraHttpRequestParams)
             .map((response: Response) => {
                 if (response.status === 204) {
                     return undefined;
@@ -92,8 +92,8 @@ export class TransferApi {
      * 
      * @param value 
      */
-    public transferPost(value: models.ApiRequestITransfer, extraHttpRequestParams?: any): Observable<models.ApiResponseITransfer> {
-        return this.transferPostWithHttpInfo(value, extraHttpRequestParams)
+    public payeePost(value: models.ApiRequestIPayee, extraHttpRequestParams?: any): Observable<models.ApiResponseIPayee> {
+        return this.payeePostWithHttpInfo(value, extraHttpRequestParams)
             .map((response: Response) => {
                 if (response.status === 204) {
                     return undefined;
@@ -109,8 +109,8 @@ export class TransferApi {
      * @param id 
      * @param value 
      */
-    public transferPut(id: string, value: models.ApiRequestITransfer, extraHttpRequestParams?: any): Observable<models.ApiResponseITransfer> {
-        return this.transferPutWithHttpInfo(id, value, extraHttpRequestParams)
+    public payeePut(id: number, value: models.ApiRequestIPayee, extraHttpRequestParams?: any): Observable<models.ApiResponseIPayee> {
+        return this.payeePutWithHttpInfo(id, value, extraHttpRequestParams)
             .map((response: Response) => {
                 if (response.status === 204) {
                     return undefined;
@@ -126,15 +126,15 @@ export class TransferApi {
      * 
      * @param id 
      */
-    public transferDeleteWithHttpInfo(id: string, extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/Transfer/${id}'
+    public payeeDeleteWithHttpInfo(id: number, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/Payee/${id}'
                     .replace('${' + 'id' + '}', String(id));
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling transferDelete.');
+            throw new Error('Required parameter id was null or undefined when calling payeeDelete.');
         }
         // to determine the Content-Type header
         let consumes: string[] = [
@@ -166,8 +166,8 @@ export class TransferApi {
      * 
      * 
      */
-    public transferGetWithHttpInfo(extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/Transfer';
+    public payeeGetWithHttpInfo(extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/Payee';
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
@@ -202,15 +202,15 @@ export class TransferApi {
      * 
      * @param id 
      */
-    public transferGet_1WithHttpInfo(id: string, extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/Transfer/${id}'
+    public payeeGet_1WithHttpInfo(id: string, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/Payee/${id}'
                     .replace('${' + 'id' + '}', String(id));
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling transferGet_1.');
+            throw new Error('Required parameter id was null or undefined when calling payeeGet_1.');
         }
         // to determine the Content-Type header
         let consumes: string[] = [
@@ -243,14 +243,14 @@ export class TransferApi {
      * 
      * @param value 
      */
-    public transferPostWithHttpInfo(value: models.ApiRequestITransfer, extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/Transfer';
+    public payeePostWithHttpInfo(value: models.ApiRequestIPayee, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/Payee';
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // verify required parameter 'value' is not null or undefined
         if (value === null || value === undefined) {
-            throw new Error('Required parameter value was null or undefined when calling transferPost.');
+            throw new Error('Required parameter value was null or undefined when calling payeePost.');
         }
         // to determine the Content-Type header
         let consumes: string[] = [
@@ -292,19 +292,19 @@ export class TransferApi {
      * @param id 
      * @param value 
      */
-    public transferPutWithHttpInfo(id: string, value: models.ApiRequestITransfer, extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/Transfer/${id}'
+    public payeePutWithHttpInfo(id: number, value: models.ApiRequestIPayee, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/Payee/${id}'
                     .replace('${' + 'id' + '}', String(id));
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling transferPut.');
+            throw new Error('Required parameter id was null or undefined when calling payeePut.');
         }
         // verify required parameter 'value' is not null or undefined
         if (value === null || value === undefined) {
-            throw new Error('Required parameter value was null or undefined when calling transferPut.');
+            throw new Error('Required parameter value was null or undefined when calling payeePut.');
         }
         // to determine the Content-Type header
         let consumes: string[] = [

@@ -26,7 +26,7 @@ import { Configuration }                                     from '../configurat
 
 
 @Injectable()
-export class TransferApi {
+export class DepositApi {
     protected basePath = 'http://localhost:64319';
     public defaultHeaders: Headers = new Headers();
     public configuration: Configuration = new Configuration();
@@ -43,25 +43,9 @@ export class TransferApi {
     /**
      * 
      * 
-     * @param id 
      */
-    public transferDelete(id: string, extraHttpRequestParams?: any): Observable<any> {
-        return this.transferDeleteWithHttpInfo(id, extraHttpRequestParams)
-            .map((response: Response) => {
-                if (response.status === 204) {
-                    return undefined;
-                } else {
-                    return response.json() || {};
-                }
-            });
-    }
-
-    /**
-     * 
-     * 
-     */
-    public transferGet(extraHttpRequestParams?: any): Observable<models.ApiResponseIEnumerableITransfer> {
-        return this.transferGetWithHttpInfo(extraHttpRequestParams)
+    public depositGet(extraHttpRequestParams?: any): Observable<models.ApiResponseIEnumerableIDeposit> {
+        return this.depositGetWithHttpInfo(extraHttpRequestParams)
             .map((response: Response) => {
                 if (response.status === 204) {
                     return undefined;
@@ -76,8 +60,8 @@ export class TransferApi {
      * 
      * @param id 
      */
-    public transferGet_1(id: string, extraHttpRequestParams?: any): Observable<models.ApiResponseITransfer> {
-        return this.transferGet_1WithHttpInfo(id, extraHttpRequestParams)
+    public depositGet_1(id: string, extraHttpRequestParams?: any): Observable<models.ApiResponseIDeposit> {
+        return this.depositGet_1WithHttpInfo(id, extraHttpRequestParams)
             .map((response: Response) => {
                 if (response.status === 204) {
                     return undefined;
@@ -92,25 +76,8 @@ export class TransferApi {
      * 
      * @param value 
      */
-    public transferPost(value: models.ApiRequestITransfer, extraHttpRequestParams?: any): Observable<models.ApiResponseITransfer> {
-        return this.transferPostWithHttpInfo(value, extraHttpRequestParams)
-            .map((response: Response) => {
-                if (response.status === 204) {
-                    return undefined;
-                } else {
-                    return response.json() || {};
-                }
-            });
-    }
-
-    /**
-     * 
-     * 
-     * @param id 
-     * @param value 
-     */
-    public transferPut(id: string, value: models.ApiRequestITransfer, extraHttpRequestParams?: any): Observable<models.ApiResponseITransfer> {
-        return this.transferPutWithHttpInfo(id, value, extraHttpRequestParams)
+    public depositPost(value: models.ApiRequestIDeposit, extraHttpRequestParams?: any): Observable<models.ApiResponseIDeposit> {
+        return this.depositPostWithHttpInfo(value, extraHttpRequestParams)
             .map((response: Response) => {
                 if (response.status === 204) {
                     return undefined;
@@ -124,50 +91,9 @@ export class TransferApi {
     /**
      * 
      * 
-     * @param id 
      */
-    public transferDeleteWithHttpInfo(id: string, extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/Transfer/${id}'
-                    .replace('${' + 'id' + '}', String(id));
-
-        let queryParameters = new URLSearchParams();
-        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        // verify required parameter 'id' is not null or undefined
-        if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling transferDelete.');
-        }
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'application/json', 
-            'text/json', 
-            'application/xml', 
-            'text/xml'
-        ];
-
-        let requestOptions: RequestOptionsArgs = new RequestOptions({
-            method: RequestMethod.Delete,
-            headers: headers,
-            search: queryParameters,
-            withCredentials:this.configuration.withCredentials
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
-        }
-
-        return this.http.request(path, requestOptions);
-    }
-
-    /**
-     * 
-     * 
-     */
-    public transferGetWithHttpInfo(extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/Transfer';
+    public depositGetWithHttpInfo(extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/Deposit';
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
@@ -202,15 +128,15 @@ export class TransferApi {
      * 
      * @param id 
      */
-    public transferGet_1WithHttpInfo(id: string, extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/Transfer/${id}'
+    public depositGet_1WithHttpInfo(id: string, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/Deposit/${id}'
                     .replace('${' + 'id' + '}', String(id));
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling transferGet_1.');
+            throw new Error('Required parameter id was null or undefined when calling depositGet_1.');
         }
         // to determine the Content-Type header
         let consumes: string[] = [
@@ -243,14 +169,14 @@ export class TransferApi {
      * 
      * @param value 
      */
-    public transferPostWithHttpInfo(value: models.ApiRequestITransfer, extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/Transfer';
+    public depositPostWithHttpInfo(value: models.ApiRequestIDeposit, extraHttpRequestParams?: any): Observable<Response> {
+        const path = this.basePath + '/api/Deposit';
 
         let queryParameters = new URLSearchParams();
         let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
         // verify required parameter 'value' is not null or undefined
         if (value === null || value === undefined) {
-            throw new Error('Required parameter value was null or undefined when calling transferPost.');
+            throw new Error('Required parameter value was null or undefined when calling depositPost.');
         }
         // to determine the Content-Type header
         let consumes: string[] = [
@@ -273,60 +199,6 @@ export class TransferApi {
 
         let requestOptions: RequestOptionsArgs = new RequestOptions({
             method: RequestMethod.Post,
-            headers: headers,
-            body: value == null ? '' : JSON.stringify(value), // https://github.com/angular/angular/issues/10612
-            search: queryParameters,
-            withCredentials:this.configuration.withCredentials
-        });
-        // https://github.com/swagger-api/swagger-codegen/issues/4037
-        if (extraHttpRequestParams) {
-            requestOptions = (<any>Object).assign(requestOptions, extraHttpRequestParams);
-        }
-
-        return this.http.request(path, requestOptions);
-    }
-
-    /**
-     * 
-     * 
-     * @param id 
-     * @param value 
-     */
-    public transferPutWithHttpInfo(id: string, value: models.ApiRequestITransfer, extraHttpRequestParams?: any): Observable<Response> {
-        const path = this.basePath + '/api/Transfer/${id}'
-                    .replace('${' + 'id' + '}', String(id));
-
-        let queryParameters = new URLSearchParams();
-        let headers = new Headers(this.defaultHeaders.toJSON()); // https://github.com/angular/angular/issues/6845
-        // verify required parameter 'id' is not null or undefined
-        if (id === null || id === undefined) {
-            throw new Error('Required parameter id was null or undefined when calling transferPut.');
-        }
-        // verify required parameter 'value' is not null or undefined
-        if (value === null || value === undefined) {
-            throw new Error('Required parameter value was null or undefined when calling transferPut.');
-        }
-        // to determine the Content-Type header
-        let consumes: string[] = [
-            'application/json', 
-            'text/json', 
-            'application/xml', 
-            'text/xml', 
-            'application/x-www-form-urlencoded'
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'application/json', 
-            'text/json', 
-            'application/xml', 
-            'text/xml'
-        ];
-
-        headers.set('Content-Type', 'application/json');
-
-        let requestOptions: RequestOptionsArgs = new RequestOptions({
-            method: RequestMethod.Put,
             headers: headers,
             body: value == null ? '' : JSON.stringify(value), // https://github.com/angular/angular/issues/10612
             search: queryParameters,

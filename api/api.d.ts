@@ -10,4 +10,4 @@ export * from './PaymentApi';
 import { PaymentApi } from './PaymentApi';
 export * from './TransferApi';
 import { TransferApi } from './TransferApi';
-export const APIS = [AccountApi, AccountsApi, DepositApi, PayeeApi, PaymentApi, TransferApi];
+export declare const APIS: (typeof AccountApi | typeof AccountsApi | typeof DepositApi | typeof PayeeApi | typeof PaymentApi | typeof TransferApi)[];
