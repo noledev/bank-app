@@ -1,6 +1,6 @@
 {
   "name": "bank-app-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Client for a bank API",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/noledev/bank-app#readme",
   "dependencies": {
-      "@angular/core": "4.0.2",
-      "@angular/http": "4.0.2",
-      "rxjs": "5.1.1",
-      "zone.js": "^0.8.9"
+    "@angular/core": "4.0.2",
+    "@angular/http": "4.0.2",
+    "rxjs": "5.1.1",
+    "zone.js": "^0.8.9"
   }
 }
