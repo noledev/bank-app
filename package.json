@@ -1,6 +1,6 @@
 {
   "name": "bank-app-api",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Client for a bank API",
   "main": "index.js",
   "scripts": {
