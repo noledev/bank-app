@@ -2,14 +2,98 @@
 1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
 1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'version',
-1 verbose cli   'patch' ]
+1 verbose cli   'minor' ]
 2 info using npm@3.10.8
 3 info using node@v6.9.1
 4 info git [ 'status', '--porcelain' ]
 5 verbose stack Error: Git working directory not clean.
-5 verbose stack M api/TransferApi.ts
-5 verbose stack M api/api.ts
-5 verbose stack M model/models.ts
+5 verbose stack M api/AccountApi.js
+5 verbose stack D api/AccountApi.js.map
+5 verbose stack M api/AccountsApi.js
+5 verbose stack D api/AccountsApi.js.map
+5 verbose stack M api/DepositApi.js
+5 verbose stack D api/DepositApi.js.map
+5 verbose stack M api/PayeeApi.js
+5 verbose stack D api/PayeeApi.js.map
+5 verbose stack M api/PaymentApi.js
+5 verbose stack D api/PaymentApi.js.map
+5 verbose stack M api/TransferApi.js
+5 verbose stack D api/TransferApi.js.map
+5 verbose stack D api/ValuesApi.js.map
+5 verbose stack M api/api.js
+5 verbose stack D api/api.js.map
+5 verbose stack M configuration.js
+5 verbose stack D configuration.js.map
+5 verbose stack M index.js
+5 verbose stack D index.js.map
+5 verbose stack M model/AddExternalLoginBindingModel.js
+5 verbose stack D model/AddExternalLoginBindingModel.js.map
+5 verbose stack M model/ApiRequestIDeposit.js
+5 verbose stack D model/ApiRequestIDeposit.js.map
+5 verbose stack M model/ApiRequestIPayee.js
+5 verbose stack D model/ApiRequestIPayee.js.map
+5 verbose stack M model/ApiRequestIPayment.js
+5 verbose stack D model/ApiRequestIPayment.js.map
+5 verbose stack M model/ApiRequestITransfer.js
+5 verbose stack D model/ApiRequestITransfer.js.map
+5 verbose stack M model/ApiResponseIAccount.js
+5 verbose stack D model/ApiResponseIAccount.js.map
+5 verbose stack M model/ApiResponseIDeposit.js
+5 verbose stack D model/ApiResponseIDeposit.js.map
+5 verbose stack M model/ApiResponseIEnumerableIAccount.js
+5 verbose stack D model/ApiResponseIEnumerableIAccount.js.map
+5 verbose stack M model/ApiResponseIEnumerableIDeposit.js
+5 verbose stack D model/ApiResponseIEnumerableIDeposit.js.map
+5 verbose stack M model/ApiResponseIEnumerableIPayee.js
+5 verbose stack D model/ApiResponseIEnumerableIPayee.js.map
+5 verbose stack M model/ApiResponseIEnumerableIPayment.js
+5 verbose stack D model/ApiResponseIEnumerableIPayment.js.map
+5 verbose stack M model/ApiResponseIEnumerableITransfer.js
+5 verbose stack D model/ApiResponseIEnumerableITransfer.js.map
+5 verbose stack M model/ApiResponseIPayee.js
+5 verbose stack D model/ApiResponseIPayee.js.map
+5 verbose stack M model/ApiResponseIPayment.js
+5 verbose stack D model/ApiResponseIPayment.js.map
+5 verbose stack M model/ApiResponseITransfer.js
+5 verbose stack D model/ApiResponseITransfer.js.map
+5 verbose stack M model/ChangePasswordBindingModel.js
+5 verbose stack D model/ChangePasswordBindingModel.js.map
+5 verbose stack M model/ExternalLoginViewModel.js
+5 verbose stack D model/ExternalLoginViewModel.js.map
+5 verbose stack M model/IAccount.js
+5 verbose stack D model/IAccount.js.map
+5 verbose stack M model/IDeposit.js
+5 verbose stack D model/IDeposit.js.map
+5 verbose stack M model/IPayee.js
+5 verbose stack D model/IPayee.js.map
+5 verbose stack M model/IPayment.js
+5 verbose stack D model/IPayment.js.map
+5 verbose stack M model/IRecurrence.js
+5 verbose stack D model/IRecurrence.js.map
+5 verbose stack M model/ITransaction.js
+5 verbose stack D model/ITransaction.js.map
+5 verbose stack M model/ITransfer.js
+5 verbose stack D model/ITransfer.js.map
+5 verbose stack M model/ManageInfoViewModel.js
+5 verbose stack D model/ManageInfoViewModel.js.map
+5 verbose stack M model/RegisterBindingModel.js
+5 verbose stack D model/RegisterBindingModel.js.map
+5 verbose stack M model/RegisterExternalBindingModel.js
+5 verbose stack D model/RegisterExternalBindingModel.js.map
+5 verbose stack M model/RemoveLoginBindingModel.js
+5 verbose stack D model/RemoveLoginBindingModel.js.map
+5 verbose stack M model/SetPasswordBindingModel.js
+5 verbose stack D model/SetPasswordBindingModel.js.map
+5 verbose stack M model/UserInfoViewModel.js
+5 verbose stack D model/UserInfoViewModel.js.map
+5 verbose stack M model/UserLoginInfoViewModel.js
+5 verbose stack D model/UserLoginInfoViewModel.js.map
+5 verbose stack M model/models.js
+5 verbose stack D model/models.js.map
+5 verbose stack D npm-debug.log
+5 verbose stack M tsconfig.json
+5 verbose stack M variables.js
+5 verbose stack D variables.js.map
 5 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\lib\version.js:247:19
 5 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\lib\utils\no-progress-while-running.js:21:8
 5 verbose stack     at ChildProcess.exithandler (child_process.js:197:7)
@@ -22,13 +106,97 @@
 5 verbose stack     at Pipe._handle.close [as _onclose] (net.js:498:12)
 6 verbose cwd d:\GitRepos\bank-app
 7 error Windows_NT 10.0.14393
-8 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "version" "patch"
+8 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "version" "minor"
 9 error node v6.9.1
 10 error npm  v3.10.8
 11 error Git working directory not clean.
-11 error M api/TransferApi.ts
-11 error M api/api.ts
-11 error M model/models.ts
+11 error M api/AccountApi.js
+11 error D api/AccountApi.js.map
+11 error M api/AccountsApi.js
+11 error D api/AccountsApi.js.map
+11 error M api/DepositApi.js
+11 error D api/DepositApi.js.map
+11 error M api/PayeeApi.js
+11 error D api/PayeeApi.js.map
+11 error M api/PaymentApi.js
+11 error D api/PaymentApi.js.map
+11 error M api/TransferApi.js
+11 error D api/TransferApi.js.map
+11 error D api/ValuesApi.js.map
+11 error M api/api.js
+11 error D api/api.js.map
+11 error M configuration.js
+11 error D configuration.js.map
+11 error M index.js
+11 error D index.js.map
+11 error M model/AddExternalLoginBindingModel.js
+11 error D model/AddExternalLoginBindingModel.js.map
+11 error M model/ApiRequestIDeposit.js
+11 error D model/ApiRequestIDeposit.js.map
+11 error M model/ApiRequestIPayee.js
+11 error D model/ApiRequestIPayee.js.map
+11 error M model/ApiRequestIPayment.js
+11 error D model/ApiRequestIPayment.js.map
+11 error M model/ApiRequestITransfer.js
+11 error D model/ApiRequestITransfer.js.map
+11 error M model/ApiResponseIAccount.js
+11 error D model/ApiResponseIAccount.js.map
+11 error M model/ApiResponseIDeposit.js
+11 error D model/ApiResponseIDeposit.js.map
+11 error M model/ApiResponseIEnumerableIAccount.js
+11 error D model/ApiResponseIEnumerableIAccount.js.map
+11 error M model/ApiResponseIEnumerableIDeposit.js
+11 error D model/ApiResponseIEnumerableIDeposit.js.map
+11 error M model/ApiResponseIEnumerableIPayee.js
+11 error D model/ApiResponseIEnumerableIPayee.js.map
+11 error M model/ApiResponseIEnumerableIPayment.js
+11 error D model/ApiResponseIEnumerableIPayment.js.map
+11 error M model/ApiResponseIEnumerableITransfer.js
+11 error D model/ApiResponseIEnumerableITransfer.js.map
+11 error M model/ApiResponseIPayee.js
+11 error D model/ApiResponseIPayee.js.map
+11 error M model/ApiResponseIPayment.js
+11 error D model/ApiResponseIPayment.js.map
+11 error M model/ApiResponseITransfer.js
+11 error D model/ApiResponseITransfer.js.map
+11 error M model/ChangePasswordBindingModel.js
+11 error D model/ChangePasswordBindingModel.js.map
+11 error M model/ExternalLoginViewModel.js
+11 error D model/ExternalLoginViewModel.js.map
+11 error M model/IAccount.js
+11 error D model/IAccount.js.map
+11 error M model/IDeposit.js
+11 error D model/IDeposit.js.map
+11 error M model/IPayee.js
+11 error D model/IPayee.js.map
+11 error M model/IPayment.js
+11 error D model/IPayment.js.map
+11 error M model/IRecurrence.js
+11 error D model/IRecurrence.js.map
+11 error M model/ITransaction.js
+11 error D model/ITransaction.js.map
+11 error M model/ITransfer.js
+11 error D model/ITransfer.js.map
+11 error M model/ManageInfoViewModel.js
+11 error D model/ManageInfoViewModel.js.map
+11 error M model/RegisterBindingModel.js
+11 error D model/RegisterBindingModel.js.map
+11 error M model/RegisterExternalBindingModel.js
+11 error D model/RegisterExternalBindingModel.js.map
+11 error M model/RemoveLoginBindingModel.js
+11 error D model/RemoveLoginBindingModel.js.map
+11 error M model/SetPasswordBindingModel.js
+11 error D model/SetPasswordBindingModel.js.map
+11 error M model/UserInfoViewModel.js
+11 error D model/UserInfoViewModel.js.map
+11 error M model/UserLoginInfoViewModel.js
+11 error D model/UserLoginInfoViewModel.js.map
+11 error M model/models.js
+11 error D model/models.js.map
+11 error D npm-debug.log
+11 error M tsconfig.json
+11 error M variables.js
+11 error D variables.js.map
 12 error If you need help, you may report this error at:
 12 error     <https://github.com/npm/npm/issues>
 13 verbose exit [ 1, true ]

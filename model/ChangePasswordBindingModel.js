@@ -10,4 +10,3 @@
  * Do not edit the class manually.
  */
 "use strict";
-//# sourceMappingURL=ChangePasswordBindingModel.js.map

@@ -141,4 +141,3 @@ AccountsApi = __decorate([
     __param(1, core_1.Optional()), __param(1, core_1.Inject(variables_1.BASE_PATH)), __param(2, core_1.Optional())
 ], AccountsApi);
 exports.AccountsApi = AccountsApi;
-//# sourceMappingURL=AccountsApi.js.map

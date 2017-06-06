@@ -10,4 +10,3 @@
  * Do not edit the class manually.
  */
 "use strict";
-//# sourceMappingURL=IPayment.js.map

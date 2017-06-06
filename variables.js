@@ -7,4 +7,3 @@ exports.COLLECTION_FORMATS = {
     'ssv': ' ',
     'pipes': '|'
 };
-//# sourceMappingURL=variables.js.map

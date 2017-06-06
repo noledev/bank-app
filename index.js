@@ -6,4 +6,3 @@ __export(require("./api/api"));
 __export(require("./model/models"));
 __export(require("./variables"));
 __export(require("./configuration"));
-//# sourceMappingURL=index.js.map

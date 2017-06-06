@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es2016",
+        "target": "es2015",
         "noImplicitAny": false,
-        "sourceMap": true
+        "sourceMap": true,
+        "emitDecoratorMetadata": true
     }
 }

@@ -15,4 +15,3 @@ var PaymentApi_1 = require("./PaymentApi");
 __export(require("./TransferApi"));
 var TransferApi_1 = require("./TransferApi");
 exports.APIS = [AccountApi_1.AccountApi, AccountsApi_1.AccountsApi, DepositApi_1.DepositApi, PayeeApi_1.PayeeApi, PaymentApi_1.PaymentApi, TransferApi_1.TransferApi];
-//# sourceMappingURL=api.js.map

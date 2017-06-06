@@ -5,4 +5,3 @@ var Configuration = (function () {
     return Configuration;
 }());
 exports.Configuration = Configuration;
-//# sourceMappingURL=configuration.js.map

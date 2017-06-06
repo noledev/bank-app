@@ -20,4 +20,3 @@ var ITransaction;
         TypeEnum[TypeEnum["Transfer"] = 'Transfer'] = "Transfer";
     })(TypeEnum = ITransaction.TypeEnum || (ITransaction.TypeEnum = {}));
 })(ITransaction = exports.ITransaction || (exports.ITransaction = {}));
-//# sourceMappingURL=ITransaction.js.map

@@ -19,4 +19,3 @@ var IAccount;
         TypeEnum[TypeEnum["CreditCard"] = 'CreditCard'] = "CreditCard";
     })(TypeEnum = IAccount.TypeEnum || (IAccount.TypeEnum = {}));
 })(IAccount = exports.IAccount || (exports.IAccount = {}));
-//# sourceMappingURL=IAccount.js.map

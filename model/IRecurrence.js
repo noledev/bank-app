@@ -20,4 +20,3 @@ var IRecurrence;
         FrequencyEnum[FrequencyEnum["Annually"] = 'Annually'] = "Annually";
     })(FrequencyEnum = IRecurrence.FrequencyEnum || (IRecurrence.FrequencyEnum = {}));
 })(IRecurrence = exports.IRecurrence || (exports.IRecurrence = {}));
-//# sourceMappingURL=IRecurrence.js.map
